@@ -27,6 +27,11 @@ const Tooltip = styled.div`
 	}
 `;
 
+const Container = styled.div`
+	border: 1px solid cornflowerblue;
+	border-radius: 2%;
+`;
+
 export const BasicPieChart = () => {
 	const ref = useRef();
 	const [data, setData] = useState([]);
@@ -213,16 +218,7 @@ export const BasicPieChart = () => {
 		<div>
 			<button onClick={updateData}>update data</button>
 			<button onClick={clearData}>clear</button>
-			<div ref={ref} style={{ backgroundColor: "#e9edc9" }} />
-			{/* <div id="tooltip" className="hidden">
-				<p>Hi, I am a tooltip.</p>
-				<p>
-					name is : <span className="name"></span>
-				</p>
-				<p>
-					Value is : <span className="value">0</span>
-				</p>
-			</div> */}
+			<Container ref={ref} />
 			<Tooltip id="tooltip2" {...tooltipState}>
 				<p>Hi, I am a tooltip.</p>
 				<p>

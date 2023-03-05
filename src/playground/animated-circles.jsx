@@ -1,5 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import * as d3 from "d3";
+import styled from "styled-components";
+
+const Container = styled.div`
+	border: 1px solid cornflowerblue;
+	border-radius: 2%;
+`;
 
 const AnimatedCircles = () => {
 	const ref = useRef();
@@ -83,7 +89,7 @@ const AnimatedCircles = () => {
 		<div>
 			<button onClick={updateData}>update data</button>
 			<button onClick={clearData}>clear</button>
-			<div ref={ref} style={{ backgroundColor: "#e9edc9" }}></div>
+			<Container ref={ref}></Container>
 		</div>
 	);
 };
